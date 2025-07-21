@@ -73,6 +73,7 @@ export default defineConfig({
 		css: true
 	},
 	output: {
+		path: __dirname + "/dist",
 		publicPath: "auto",
 		clean: true,
 	},
