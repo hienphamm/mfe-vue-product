@@ -8,8 +8,10 @@
     "preview": "rspack preview"
   },
   "dependencies": {
+    "lucide-vue-next": "^0.534.0",
+    "mfe-ui-kit": "0.0.12",
     "vue": "^3.5.17",
-    "mfe-ui-kit": "0.0.4"
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@module-federation/enhanced": "^0.17.0",
