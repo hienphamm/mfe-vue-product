@@ -8,7 +8,7 @@ export default createModuleFederationConfig({
         './App': './src/bootstrap.ts',
     },
     remotes: {
-        global_store: `global_store@${isProd ? 'https://mfe-vue-global-store.vercel.app' : 'http://localhost:3000'}/mf-manifest.json`,
+        global_store: `global_store@${isProd ? 'https://mfe-global-store.vercel.app' : 'http://localhost:3000'}/mf-manifest.json`,
     },
     shared: {
         vue: {singleton: true, eager: true, requiredVersion: '^3.5.17'},
