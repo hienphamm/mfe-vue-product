@@ -1,14 +1,10 @@
 <script lang="ts" setup>
 import "../style.css";
 import {ArrowRight, Heart, ShoppingCart, Star} from "lucide-vue-next";
-import {ref} from "vue";
+import {inject, ref} from "vue";
 import StayUpdated from "../components/StayUpdated.vue";
 import {useRouter} from "vue-router";
 import Hero from "../components/Hero.vue";
-
-defineProps<{
-  msg: string;
-}>();
 
 const bestSellers = ref([
   {
@@ -32,6 +28,8 @@ const bestSellers = ref([
 
 const router = useRouter();
 
+const globalStore = inject('globalStore');
+
 function goToDetail(productId: number) {
   router.push(`/product/${productId}`);
 }
@@ -42,8 +40,7 @@ function toggleFavorite(productId: number) {
 }
 
 function addToCart(productId: number) {
-  // handle add to cart logic here
-  alert(`Added product ${productId} to cart`);
+  globalStore.addToCart(productId)
 }
 </script>
 
